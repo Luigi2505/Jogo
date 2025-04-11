@@ -5,23 +5,41 @@ print(f"Olá {nome}! Vamos jogar?")
 escolha = input("Escolha o modo de jogo: \n1 - jogar contra computador \n2 - jogar contra jogador \n3 - computador contra computador \n4 - sair \nDigite seu modo: ")
 if escolha == "1":
     print("Você escolheu jogador contra computador")
-    jogador = input("Escolha entre pedra, papel ou tesoura: ")
-    comp = random.choice(["pedra", "papel", "tesoura"])
-    print(f"Computador escolheu: {comp}")
-    if jogador == comp:
-        print("empate")
-    elif jogador == "pedra" and comp == "tesoura":
-        print("Você ganhou!")
-    elif jogador == "pedra" and comp == "papel":
-        print("Você perdeu!")
-    elif jogador == "tesoura" and comp == "papel":
-        print("Você ganhou!")
-    elif jogador == "tesoura" and comp == "pedra":
-        print("Você perdeu!")
-    elif jogador == "papel" and comp == "pedra":
-        print("Você ganhou!")
-    elif jogador == "papel" and comp == "tesoura":
-        print("Você perdeu!")
+    time_jogador = 0
+    time_computador = 0
+    while escolha == "1":
+        contador_rodadas = 0
+        soma = 0
+        jogador = input("Escolha entre pedra, papel ou tesoura: ")
+        comp = random.choice(["pedra", "papel", "tesoura"])
+        print(f"Computador escolheu: {comp}")
+        if jogador == comp:
+            print("empate")
+        elif jogador == "pedra" and comp == "tesoura":
+            print("Você ganhou!")
+            time_jogador += 1
+            print(f"o Placar está Jogador: {time_jogador} \nComputador: {time_computador}")
+        elif jogador == "pedra" and comp == "papel":
+            print("Você perdeu!")
+            time_computador += 1
+            print(f"o Placar está Jogador: {time_jogador} \nComputador:{time_computador}")
+        elif jogador == "tesoura" and comp == "papel":
+            print("Você ganhou!")
+            time_jogador += 1
+            print(f"o Placar está Jogador: {time_jogador} \nComputador:{time_computador}")
+        elif jogador == "tesoura" and comp == "pedra":
+            print("Você perdeu!")
+            time_computador += 1
+            print(f"o Placar está Jogador: {time_jogador} \nComputador:{time_computador}")
+        elif jogador == "papel" and comp == "pedra":
+            print("Você ganhou!")
+            time_jogador += 1
+            print(f"o Placar está Jogador: {time_jogador} \nComputador:{time_computador}")
+        elif jogador == "papel" and comp == "tesoura":
+            print("Você perdeu!")
+            time_computador += 1
+            print(f"o Placar está Jogador: {time_jogador} \nComputador:{time_computador}")
+        break
 elif escolha == '2':
     print("Você escolheu jogador contra jogador")
     jogador1 = input("Jogador 1, escolha entre pedra, papel, tesoura: ")
