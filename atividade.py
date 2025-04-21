@@ -18,7 +18,7 @@ while escolha == "1":
     if jogador == comp:
         print("Empate")
         time_jogador += 0
-        time_computador =+ 0
+        time_computador += 0
 
     elif jogador == "pedra" and comp == "tesoura":
         print("Você ganhou!")
