@@ -1,5 +1,3 @@
-#FAZER CONTINUAR JOGANDO (NO MODO, OUTRO MODO, OU SAIR)
-
 import random
 
 print("Vamos jogar pedra papel e tesoura? ")
@@ -9,59 +7,45 @@ print(f"Olá, {nome}! Vamos jogar?")
 escolha = input("Escolha o modo de jogo: \n1 - Jogador vs Computador \n2 - Jogador vs Jogador \n3 - Computador vs Computador \n4 - Sair \nDigite seu modo: ")
 time_jogador = 0
 time_computador = 0
-while escolha == "1":
+
+if escolha == "1":
     print("Você escolheu Jogador vs Computador")
+while escolha == "1":
     jogador = input("Escolha entre pedra, papel ou tesoura: ").lower()
     comp = random.choice(["pedra", "papel", "tesoura"])
     print(f"Computador escolheu: {comp}")
 
     if jogador == comp:
         print("Empate")
-        print(f"---PLACAR--- \nJogador: {time_jogador} \nComputador: {time_computador}")
-        print("Você deseja continuar jogando?")
-        escolha = input("Digite 1 se deseja continuar e 4 se deseja sair: ")
+        time_jogador += 0
+        time_computador =+ 0
 
     elif jogador == "pedra" and comp == "tesoura":
         print("Você ganhou!")
         time_jogador += 1
-        print(f"---PLACAR--- \nJogador: {time_jogador} \nComputador: {time_computador}")
-        print("Você deseja continuar jogando?")
-        escolha = input("Digite 1 se deseja continuar e 4 se deseja sair: ")
 
     elif jogador == "pedra" and comp == "papel":
         print("Você perdeu!")
         time_computador += 1
-        print(f"---PLACAR--- \nJogador: {time_jogador} \nComputador: {time_computador}")
-        print("Você deseja continuar jogando?")
-        escolha = input("Digite 1 se deseja continuar e 4 se deseja sair: ")
 
     elif jogador == "tesoura" and comp == "papel":
         print("Você ganhou!")
         time_jogador += 1
-        print(f"---PLACAR--- \nJogador: {time_jogador} \nComputador: {time_computador}")
-        print("Você deseja continuar jogando?")
-        escolha = input("Digite 1 se deseja continuar e 4 se deseja sair: ")
 
     elif jogador == "tesoura" and comp == "pedra":
         print("Você perdeu!")
         time_computador += 1
-        print(f"---PLACAR--- \nJogador: {time_jogador} \nComputador: {time_computador}")
-        print("Você deseja continuar jogando?")
-        escolha = input("Digite 1 se deseja continuar e 4 se deseja sair: ")
 
     elif jogador == "papel" and comp == "pedra":
         print("Você ganhou!")
         time_jogador += 1
-        print(f"---PLACAR--- \nJogador: {time_jogador} \nComputador: {time_computador}")
-        print("Você deseja continuar jogando?")
-        escolha = input("Digite 1 para continuar ou 4 se deseja sair: ")
 
     elif jogador == "papel" and comp == "tesoura":
         print("Você perdeu!")
         time_computador += 1
-        print(f"---PLACAR--- \nJogador: {time_jogador} \nComputador: {time_computador}")
-        print("Você deseja continuar jogando?")
-        escolha = input("Digite 1 se deseja continuar e 4 se deseja sair: ")
+
+    print(f"---PLACAR--- \n{nome}: {time_jogador} \nComputador: {time_computador}")
+    escolha = input("Digite 1 se deseja continuar e 4 se deseja sair: ")
 
 time_jogador1 = 0
 time_jogador2 = 0
@@ -75,43 +59,35 @@ while escolha == '2':
 
     if jogador1 == jogador2:
         print("Empate")
-        escolha = input("Digite 2 se deseja continuar e 4 se deseja sair: ")
+        time_jogador1 += 0
+        time_jogador2 += 0
 
     elif jogador1 == "pedra" and jogador2 == "tesoura":
         print(f"{nome} ganhou!")
         time_jogador1 +=1
-        print(f"---PLACAR--- \n{nome}: {time_jogador1} \n{nome_jogador2}: {time_jogador2}")
-        escolha = input("Digite 2 se deseja continuar e 4 se deseja sair: ")
 
     elif jogador1 == "pedra" and jogador2 == "papel":
         print(f"{nome_jogador2} ganhou!")
         time_jogador2 += 1
-        print(f"---PLACAR--- \n{nome}: {time_jogador1} \n{nome_jogador2}: {time_jogador2}")
-        escolha = input("Digite 2 se deseja continuar e 4 se deseja sair: ")
 
     elif jogador1 == "papel" and jogador2 == "tesoura":
         print(f"{nome_jogador2} ganhou!")
         time_jogador2 += 1
-        print(f"---PLACAR--- \n{nome}: {time_jogador1} \n{nome_jogador2}: {time_jogador2}")
-        escolha = input("Digite 2 se deseja continuar e 4 se deseja sair: ")
 
     elif jogador1 == "papel" and jogador2 == "pedra":
         print(f"{nome} ganhou!")
         time_jogador1 += 1
-        print(f"---PLACAR--- \n{nome}: {time_jogador1} \n{nome_jogador2}: {time_jogador2}")
-        escolha = input("Digite 2 se deseja continuar e 4 se deseja sair: ")
 
     elif jogador1 == "tesoura" and jogador2 == "papel":
         print(f"{nome} ganhou!")
         time_jogador1 += 1
-        print(f"---PLACAR--- \n{nome}: {time_jogador1} \n{nome_jogador2}: {time_jogador2}")
-        escolha = input("Digite 2 se deseja continuar e 4 se deseja sair: ")
 
     elif jogador1 == "tesoura" and jogador2 == "pedra":
         print(f"{nome_jogador2} ganhou!")
         time_jogador2 += 1
-        print(f"---PLACAR--- \n{nome}: {time_jogador1} \n{nome_jogador2}: {time_jogador2}")
-        escolha = input("Digite 2 se deseja continuar e 4 se deseja sair: ")
+
+    print(f"---PLACAR--- \n{nome}: {time_jogador1} \n{nome_jogador2}: {time_jogador2}")
+    escolha = input("Digite 2 se deseja continuar e 4 se deseja sair: ")
 
 time_comp1 = 0
 time_comp2 = 0
@@ -125,43 +101,35 @@ while escolha == '3':
 
     if comp1 == comp2:
         print("Empate")
-        escolha = input("Digite 3 se deseja continuar e 4 se deseja sair: ")
+        time_comp1 += 0
+        time_comp2 += 0
 
     elif comp1 == "pedra" and comp2 == "tesoura":
         print("Computador 1 ganhou!")
         time_comp1 += 1
-        print(f"---PLACAR--- \nComputador 1: {time_comp1} \nComputador 2: {time_comp2}")
-        escolha = input("Digite 3 se deseja continuar e 4 se deseja sair: ")
 
     elif comp1 == "pedra" and comp2 == "papel":
         print("Computador 2 ganhou!")
         time_comp2 += 1
-        print(f"---PLACAR--- \nComputador 1: {time_comp1} \nComputador 2: {time_comp2}")
-        escolha = input("Digite 3 se deseja continuar e 4 se deseja sair: ")
 
     elif comp1 == "papel" and comp2 == "tesoura":
         print("Computador 2 ganhou!")
         time_comp2 += 1
-        print(f"---PLACAR--- \nComputador 1: {time_comp1} \nComputador 2: {time_comp2}")
-        escolha = input("Digite 3 se deseja continuar e 4 se deseja sair: ")
 
     elif comp1 == "papel" and comp2 == "pedra":
         print("Computador 1 ganhou!")
         time_comp1 += 1
-        print(f"---PLACAR--- \nComputador 1: {time_comp1} \nComputador 2: {time_comp2}")
-        escolha = input("Digite 3 se deseja continuar e 4 se deseja sair: ")
 
     elif comp1 == "tesoura" and comp2 == "papel":
         print("Computador 1 ganhou!")
         time_comp1 += 1
-        print(f"---PLACAR--- \nComputador 1: {time_comp1} \nComputador 2: {time_comp2}")
-        escolha = input("Digite 3 se deseja continuar e 4 se deseja sair: ")
 
     elif comp1 == "tesoura" and comp2 == "pedra":
         print("Computador 2 ganhou!")
         time_comp2 += 1
-        print(f"---PLACAR--- \nComputador 1: {time_comp1} \nComputador 2: {time_comp2}")
-        escolha = input("Digite 3 se deseja continuar e 4 se deseja sair: ")
+
+    print(f"---PLACAR--- \nComputador 1: {time_comp1} \nComputador 2: {time_comp2}")
+    escolha = input("Digite 3 se deseja continuar e 4 se deseja sair: ")
 
 if escolha == "4":
     print("Você escolheu sair, até a próxima!")
