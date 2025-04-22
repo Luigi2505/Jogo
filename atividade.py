@@ -1,3 +1,4 @@
+
 import random
 
 print("Vamos jogar pedra papel e tesoura? ")
@@ -5,6 +6,7 @@ nome = input("Qual é o seu nome?: ")
 print(f"Olá, {nome}! Vamos jogar?")
 
 escolha = input("Escolha o modo de jogo: \n1 - Jogador vs Computador \n2 - Jogador vs Jogador \n3 - Computador vs Computador \n4 - Sair \nDigite seu modo: ")
+
 time_jogador = 0
 time_computador = 0
 
@@ -46,6 +48,7 @@ while escolha == "1":
 
     print(f"---PLACAR--- \n{nome}: {time_jogador} \nComputador: {time_computador}")
     escolha = input("Digite 1 se deseja continuar e 4 se deseja sair: ")
+
 
 time_jogador1 = 0
 time_jogador2 = 0
@@ -133,6 +136,15 @@ while escolha == '3':
 
 if escolha == "4":
     print("Você escolheu sair, até a próxima!")
+    if time_jogador >= 1 or time_computador >= 1:
+        print(f"---PLACAR--- \n{nome}: {time_jogador} \nComputador: {time_computador}")
+
+    elif time_jogador1 >= 1 or time_jogador2 >= 1:
+        print(f"---PLACAR--- \n{nome}: {time_jogador1} \n{nome_jogador2}: {time_jogador2}")
+
+    elif time_comp1 >= 1 or time_comp2 >= 1:
+        print(f"---PLACAR--- \nComputador 1: {time_comp1} \nComputador 2: {time_comp2}")
+
 else:
     print("Insira um número válido!")
 
