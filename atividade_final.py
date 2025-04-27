@@ -105,6 +105,7 @@ while escolha == '2':
     print(f"---PLACAR--- \n{nome}: {time_jogador1} \n{nome_jogador2}: {time_jogador2}")
     escolha = input("Digite 2 se deseja continuar e 4 se deseja sair: ")
 
+#iniciando placar cpu vs cpu
 time_comp1 = 0
 time_comp2 = 0
 
